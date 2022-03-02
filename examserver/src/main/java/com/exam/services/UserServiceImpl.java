@@ -28,7 +28,7 @@ public class UserServiceImpl implements UserService {
 		
 		if(email != null) {
 			System.out.println("User Already Exist!");
-			throw new Exception("User already present");
+			throw new Exception("User already present with this Email");
 		}
 		else {
 			

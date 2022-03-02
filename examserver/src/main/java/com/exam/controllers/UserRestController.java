@@ -12,6 +12,7 @@ import com.exam.services.UserService;
 
 @RestController
 @RequestMapping("/user")
+@CrossOrigin("*")
 public class UserRestController {
 	
 	@Autowired
@@ -19,7 +20,9 @@ public class UserRestController {
 	
 	@PostMapping("/")
 	public User createUser(@RequestBody User user) throws Exception {
-		
+
+		user.setProfileImg("default.png");
+
 		Role role1 = new Role();
 		role1.setrId(1L);
 		role1.setRoleName("ADMIN");
